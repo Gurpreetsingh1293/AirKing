@@ -1,0 +1,95 @@
+.card {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-blue);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: #F9FAFB;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.image {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #6B7280;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.specs {
+    list-style: none;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #F3F4F6;
+}
+
+.specs li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.specLabel {
+    font-weight: 600;
+    color: #4B5563;
+}
+
+.specValue {
+    color: #111827;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}

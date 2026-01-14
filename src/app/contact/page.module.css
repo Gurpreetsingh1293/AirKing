@@ -1,0 +1,87 @@
+.pageContainer {
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.header {
+    background-color: #002C46;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.subtitle {
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+}
+
+.infoBlock {
+    margin-bottom: 30px;
+    padding: 24px;
+    background: #F9FAFB;
+    border-radius: 8px;
+}
+
+.infoBlock h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.formWrapper {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.formWrapper h2 {
+    margin-bottom: 30px;
+    color: var(--secondary-blue);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,82 @@
+:root {
+  --primary-blue: #004E7C;
+  --secondary-blue: #002C46;
+  --industrial-red: #E63312;
+  --text-dark: #1A1A1A;
+  --text-light: #F4F4F4;
+  --bg-white: #FFFFFF;
+  --bg-light-grey: #F5F5F5;
+  --accent-grey: #D1D5DB;
+  
+  --font-heading: var(--font-geist-sans), sans-serif;
+  --font-body: var(--font-geist-sans), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--industrial-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #c42b0f;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--bg-white);
+  color: var(--bg-white);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-white);
+  color: var(--primary-blue);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
