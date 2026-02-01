@@ -13,7 +13,7 @@ export default function TawkToChat() {
             var s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
             // Replace with your Tawk.to property ID
-            s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+            s1.src = 'https://embed.tawk.to/697f8dc4fd3ee61c36a86f1c/default';
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
