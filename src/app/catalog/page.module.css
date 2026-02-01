@@ -1,0 +1,162 @@
+.catalogPage {
+    min-height: 100vh;
+}
+
+/* Dark Header */
+.header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #0d1e33 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--pure-white);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--electric-blue);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.3);
+}
+
+.downloadBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 102, 255, 0.4);
+}
+
+.downloadIcon {
+    font-size: 1.5rem;
+}
+
+/* Catalog Preview */
+.previewSection {
+    background: var(--soft-gray);
+    padding: 80px 0;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary-navy);
+    margin-bottom: 48px;
+}
+
+.catalogGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.catalogCard {
+    background: var(--pure-white);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.catalogCard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.catalogIcon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 102, 255, 0.05) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+}
+
+.catalogCard h3 {
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.catalogCard p {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+/* Info Section */
+.infoSection {
+    background: var(--pure-white);
+    padding: 80px 0;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.infoItem h4 {
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.infoItem p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, var(--electric-blue) 0%, var(--accent-teal) 100%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.ctaSection h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.ctaSection p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 0;
+    }
+
+    .previewSection {
+        padding: 48px 0;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

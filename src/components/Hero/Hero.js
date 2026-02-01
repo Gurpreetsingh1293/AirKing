@@ -19,26 +19,47 @@ const Hero = () => {
 
             <div className={`container ${styles.contentContainer}`}>
                 <div className={styles.content}>
+                    <span className={styles.badge}>Trusted Industrial Partner</span>
                     <h1 className={styles.title}>
-                        Powering Industries with <br />
-                        <span className={styles.highlight}>Reliable Air Solutions</span>
+                        Your Global Partner for <br />
+                        <span className={styles.highlight}>Air & Oxygen Solutions</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Your trusted partner for pneumatic air compressors, oxygen plants, and premium spare parts.
-                        Delivering efficiency and durability for over 20 years.
+                        Premium pneumatic air compressors, oxygen plants, and genuine spare parts.
+                        Delivering industrial excellence and reliability for over 20 years.
                     </p>
                     <div className={styles.actions}>
-                        <Link href="/products" className="btn btn-primary">
-                            View Products
+                        <Link href="/contact" className="btn btn-primary">
+                            Speak to Solutions Lead
                         </Link>
-                        <Link href="/contact" className="btn btn-outline">
-                            Contact Us
+                        <Link href="/products" className="btn btn-outline">
+                            See Our Products
                         </Link>
                     </div>
                 </div>
+            </div>
+
+            {/* Creative Floating Explore Products Button */}
+            <Link href="/products" className={styles.exploreBtn}>
+                <div className={styles.exploreBtnInner}>
+                    <div className={styles.exploreBtnIcon}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <span className={styles.exploreBtnText}>Explore Products</span>
+                </div>
+                <div className={styles.exploreBtnGlow}></div>
+            </Link>
+
+            <div className={styles.scrollIndicator}>
+                <span>Scroll to explore</span>
+                <div className={styles.scrollArrow}></div>
             </div>
         </section>
     );
 };
 
 export default Hero;
+

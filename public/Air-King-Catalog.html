@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air King - Product Catalog 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 0 auto;
+            background: white;
+            page-break-after: always;
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                padding: 15mm;
+            }
+        }
+        
+        /* Cover Page */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0A1628 0%, #1E293B 100%);
+            color: white;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #0066FF;
+        }
+        
+        .cover h2 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .cover .year {
+            font-size: 72px;
+            font-weight: 700;
+            color: #0066FF;
+            margin-bottom: 48px;
+        }
+        
+        .cover .tagline {
+            font-size: 18px;
+            max-width: 400px;
+            opacity: 0.8;
+        }
+        
+        .cover .contact-info {
+            margin-top: 80px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* Section Header */
+        .section-header {
+            background: #0066FF;
+            color: white;
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+        }
+        
+        .section-header h2 {
+            font-size: 24px;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .product-card {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .product-card h3 {
+            font-size: 16px;
+            color: #0A1628;
+            margin-bottom: 8px;
+        }
+        
+        .product-card p {
+            font-size: 12px;
+            color: #64748B;
+            margin-bottom: 12px;
+        }
+        
+        .product-card .specs {
+            font-size: 11px;
+            background: #F5F7FA;
+            padding: 12px;
+            border-radius: 4px;
+        }
+        
+        .product-card .specs div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        
+        .product-card .specs span:first-child {
+            font-weight: 600;
+            color: #0A1628;
+        }
+        
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 20mm;
+            left: 20mm;
+            right: 20mm;
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: #64748B;
+            border-top: 1px solid #E5E7EB;
+            padding-top: 12px;
+        }
+        
+        /* About Section */
+        .about-section {
+            margin-bottom: 32px;
+        }
+        
+        .about-section h3 {
+            color: #0A1628;
+            margin-bottom: 12px;
+        }
+        
+        .about-section p {
+            color: #64748B;
+            font-size: 14px;
+        }
+        
+        .contact-section {
+            background: #0A1628;
+            color: white;
+            padding: 32px;
+            border-radius: 8px;
+            margin-top: 48px;
+        }
+        
+        .contact-section h3 {
+            color: #0066FF;
+            margin-bottom: 16px;
+        }
+        
+        .contact-section p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="page cover">
+        <h1>AIR KING</h1>
+        <h2>Industrial Solutions</h2>
+        <div class="year">2026</div>
+        <p class="tagline">Your trusted partner for Air Compressors, Oxygen Plants, and Industrial Spares</p>
+        <div class="contact-info">
+            📞 +91 9826313663 | +91 9826528961<br>
+            ✉️ air.king@yahoo.co.in<br>
+            📍 1293 Station Road Rau, Indore, MP
+        </div>
+    </div>
+    
+    <!-- Air Compressors Page -->
+    <div class="page">
+        <div class="section-header">
+            <h2>🔧 Air Compressors</h2>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Four Stage Air Compressor</h3>
+                <p>Heavy duty industrial four stage air compressor for high pressure applications.</p>
+                <div class="specs">
+                    <div><span>Type:</span> <span>Four Stage</span></div>
+                    <div><span>Pressure:</span> <span>High Pressure</span></div>
+                    <div><span>Usage:</span> <span>Industrial</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Kirloskar Type Air Compressor</h3>
+                <p>Robust reciprocating air compressor designed for durability and continuous duty.</p>
+                <div class="specs">
+                    <div><span>Type:</span> <span>Reciprocating</span></div>
+                    <div><span>Cooling:</span> <span>Air Cooled</span></div>
+                    <div><span>Material:</span> <span>Cast Iron</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Vertical Air Compressor</h3>
+                <p>Space-saving vertical design air compressor, ideal for workshops with limited floor space.</p>
+                <div class="specs">
+                    <div><span>Orientation:</span> <span>Vertical</span></div>
+                    <div><span>Power:</span> <span>25-250 HP</span></div>
+                    <div><span>Efficiency:</span> <span>High</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Reciprocating Compressor</h3>
+                <p>Standard reciprocating compressor for medium-duty industrial applications.</p>
+                <div class="specs">
+                    <div><span>Type:</span> <span>Reciprocating</span></div>
+                    <div><span>Stages:</span> <span>Single/Two</span></div>
+                    <div><span>Duty:</span> <span>Continuous</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Oxygen Plant Components Page -->
+    <div class="page">
+        <div class="section-header">
+            <h2>⚗️ Oxygen Plant Components</h2>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Expansion Engine</h3>
+                <p>High-precision stainless steel expansion engine for oxygen plants. Critical for cryogenic cooling.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Stainless Steel</span></div>
+                    <div><span>Application:</span> <span>Oxygen Plant</span></div>
+                    <div><span>Type:</span> <span>High Pressure</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Liquid Oxygen Pump</h3>
+                <p>Specialized cryogenic pump for handling liquid oxygen safely and reliably.</p>
+                <div class="specs">
+                    <div><span>Fluid:</span> <span>Liquid Oxygen</span></div>
+                    <div><span>Type:</span> <span>Cryogenic</span></div>
+                    <div><span>Material:</span> <span>SS 304/316</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Ball Valve</h3>
+                <p>High-quality stainless steel ball valve for oxygen plant applications.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Stainless Steel</span></div>
+                    <div><span>Type:</span> <span>Two Piece</span></div>
+                    <div><span>Application:</span> <span>Oxygen Line</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Molecular Sieve</h3>
+                <p>High-performance molecular sieve for gas separation in PSA plants.</p>
+                <div class="specs">
+                    <div><span>Type:</span> <span>13X/5A</span></div>
+                    <div><span>Application:</span> <span>Gas Separation</span></div>
+                    <div><span>Capacity:</span> <span>Industrial</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Oxygen Analyzer</h3>
+                <p>Precision oxygen purity analyzer for monitoring and quality control.</p>
+                <div class="specs">
+                    <div><span>Range:</span> <span>0-100%</span></div>
+                    <div><span>Display:</span> <span>Digital</span></div>
+                    <div><span>Accuracy:</span> <span>±0.1%</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Perlite Powder</h3>
+                <p>Insulation material for cryogenic vessels and storage tanks.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Expanded Perlite</span></div>
+                    <div><span>Application:</span> <span>Insulation</span></div>
+                    <div><span>Temperature:</span> <span>Cryogenic</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Spares & Valves Page -->
+    <div class="page">
+        <div class="section-header">
+            <h2>⚙️ Spares & Valves</h2>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Safety Relief Valve</h3>
+                <p>Industrial brass safety valve for over-pressure protection.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Brass</span></div>
+                    <div><span>Pressure:</span> <span>Adjustable</span></div>
+                    <div><span>Connection:</span> <span>Threaded</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Aftercooler Assembly</h3>
+                <p>Efficient heat exchanger to cool compressed air and remove moisture.</p>
+                <div class="specs">
+                    <div><span>Type:</span> <span>Fin Tube</span></div>
+                    <div><span>Material:</span> <span>Copper/Steel</span></div>
+                    <div><span>Function:</span> <span>Cooling</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Air Oil Separator</h3>
+                <p>Premium quality separator element to ensure oil-free air delivery.</p>
+                <div class="specs">
+                    <div><span>Efficiency:</span> <span>99.9%</span></div>
+                    <div><span>Life:</span> <span>Long Service</span></div>
+                    <div><span>Type:</span> <span>Spin-on/Element</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Piston Rings</h3>
+                <p>Precision-engineered piston rings for oxygen compressors.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Special Alloy</span></div>
+                    <div><span>Type:</span> <span>Compression</span></div>
+                    <div><span>Application:</span> <span>Compressor</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>NRV (Non-Return Valve)</h3>
+                <p>Spring-loaded non-return valve for preventing backflow.</p>
+                <div class="specs">
+                    <div><span>Material:</span> <span>Stainless Steel</span></div>
+                    <div><span>Type:</span> <span>Spring Loaded</span></div>
+                    <div><span>Application:</span> <span>Pipeline</span></div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <h3>Air Filter</h3>
+                <p>High-efficiency air filter for compressor intake.</p>
+                <div class="specs">
+                    <div><span>Efficiency:</span> <span>99.5%</span></div>
+                    <div><span>Type:</span> <span>Panel/Cartridge</span></div>
+                    <div><span>Application:</span> <span>Compressor</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Page -->
+    <div class="page">
+        <div class="section-header">
+            <h2>📞 Contact Us</h2>
+        </div>
+        
+        <div class="about-section">
+            <h3>About Air King</h3>
+            <p>With over 20 years of experience, Air King is your trusted partner for industrial air solutions. We specialize in manufacturing and supplying high-quality air compressors, oxygen plant components, and genuine spare parts to industries across India.</p>
+        </div>
+        
+        <div class="about-section">
+            <h3>Our Services</h3>
+            <p>✓ Air Compressor Sales & Installation<br>
+            ✓ Oxygen Plant Setup & Maintenance<br>
+            ✓ Genuine Spare Parts Supply<br>
+            ✓ Annual Maintenance Contracts (AMC)<br>
+            ✓ 24/7 Breakdown Support<br>
+            ✓ Air Audit Services</p>
+        </div>
+        
+        <div class="about-section">
+            <h3>Why Choose Air King?</h3>
+            <p>✓ 20+ Years of Industry Experience<br>
+            ✓ 500+ Successful Installations<br>
+            ✓ 100% Genuine Parts Guarantee<br>
+            ✓ Pan-India Service Network<br>
+            ✓ Competitive Pricing<br>
+            ✓ Expert Technical Support</p>
+        </div>
+        
+        <div class="contact-section">
+            <h3>Get in Touch</h3>
+            <p><strong>📍 Address:</strong> 1293 Station Road Rau, Indore, Madhya Pradesh</p>
+            <p><strong>📞 Phone:</strong> +91 9826313663 | +91 9826528961</p>
+            <p><strong>✉️ Email:</strong> air.king@yahoo.co.in</p>
+            <p style="margin-top: 24px; opacity: 0.7;">For quotations and bulk orders, please contact our sales team.</p>
+        </div>
+    </div>
+</body>
+</html>

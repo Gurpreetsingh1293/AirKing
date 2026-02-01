@@ -5,15 +5,37 @@ import styles from './page.module.css';
 export default function ServicesPage() {
     return (
         <div className={styles.pageContainer}>
-            <div className={styles.header}>
+            {/* Dark Header */}
+            <header className={styles.header}>
                 <div className="container">
                     <h1 className={styles.title}>Services & Genuine Spares</h1>
-                    <p className={styles.subtitle}>Keeping your air systems running at peak efficiency.</p>
+                    <p className={styles.subtitle}>
+                        Keeping your air systems running at peak efficiency with expert maintenance and authentic parts.
+                    </p>
+                </div>
+            </header>
+
+            {/* Stats Section */}
+            <div className="container">
+                <div className={styles.statsGrid}>
+                    <div className={styles.statCard}>
+                        <span className={styles.statNumber}>24/7</span>
+                        <span className={styles.statLabel}>Service Support</span>
+                    </div>
+                    <div className={styles.statCard}>
+                        <span className={styles.statNumber}>100%</span>
+                        <span className={styles.statLabel}>Genuine Parts</span>
+                    </div>
+                    <div className={styles.statCard}>
+                        <span className={styles.statNumber}>4hr</span>
+                        <span className={styles.statLabel}>Response Time</span>
+                    </div>
                 </div>
             </div>
 
-            <div className="container">
-                <section className={styles.section}>
+            {/* Genuine Spare Parts Section */}
+            <section className={styles.section}>
+                <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
                     <div className={styles.content}>
                         <h2>Genuine Spare Parts</h2>
                         <p>
@@ -23,10 +45,10 @@ export default function ServicesPage() {
                         <ul className={styles.list}>
                             <li>Air Filters & Oil Filters</li>
                             <li>Separator Elements</li>
-                            <li>Valves & Kits</li>
-                            <li>Compressor Oil</li>
+                            <li>Valves & Repair Kits</li>
+                            <li>Compressor Oil & Lubricants</li>
                         </ul>
-                        <Link href="/contact" className="btn btn-primary" style={{ marginTop: '20px' }}>
+                        <Link href="/contact" className="btn btn-primary">
                             Order Spares
                         </Link>
                     </div>
@@ -35,12 +57,15 @@ export default function ServicesPage() {
                             src="/images/spares.png"
                             alt="Genuine Spare Parts"
                             fill
-                            style={{ objectFit: 'cover', borderRadius: '8px' }}
+                            style={{ objectFit: 'cover' }}
                         />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className={`${styles.section} ${styles.reverse}`}>
+            {/* Service & Maintenance Section */}
+            <section className={`${styles.section} ${styles.alternate} ${styles.reverse}`}>
+                <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '80px', flexDirection: 'row-reverse' }}>
                     <div className={styles.content}>
                         <h2>Service & Maintenance</h2>
                         <p>
@@ -51,19 +76,19 @@ export default function ServicesPage() {
                             <li>24/7 Breakdown Support</li>
                             <li>Preventive Maintenance</li>
                             <li>Air Audit Services</li>
-                            <li>Overhauling Services</li>
+                            <li>Complete Overhauling</li>
                         </ul>
-                        <Link href="/contact" className="btn btn-primary" style={{ marginTop: '20px' }}>
+                        <Link href="/contact" className="btn btn-primary">
                             Book Service
                         </Link>
                     </div>
                     <div className={styles.serviceBox}>
-                        <div className={styles.serviceIcon}>🛠️</div>
+                        <span className={styles.serviceIcon}>🛠️</span>
                         <h3>Expert Team</h3>
-                        <p>Factory trained engineers ready to serve.</p>
+                        <p>Factory trained engineers ready to serve across India.</p>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
     );
 }

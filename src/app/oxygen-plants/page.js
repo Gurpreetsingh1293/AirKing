@@ -5,13 +5,15 @@ import styles from './page.module.css';
 export default function OxygenPlantsPage() {
     return (
         <div className={styles.pageContainer}>
-            <div className={styles.hero}>
+            {/* Hero Section */}
+            <section className={styles.hero}>
                 <div className="container">
                     <div className={styles.heroContent}>
+                        <span className={styles.badge}>Advanced Technology</span>
                         <h1 className={styles.title}>Industrial Oxygen Plants</h1>
                         <p className={styles.subtitle}>
                             Advanced PSA (Pressure Swing Adsorption) technology for on-site oxygen generation.
-                            Reliable, cost-effective, and safe.
+                            Reliable, cost-effective, and safe solutions for medical and industrial applications.
                         </p>
                         <Link href="/contact" className="btn btn-primary">
                             Get a Quote
@@ -26,15 +28,18 @@ export default function OxygenPlantsPage() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-            </div>
+            </section>
 
+            {/* Features Section */}
             <section className="container section-padding">
                 <div className={styles.grid}>
                     <div className={styles.card}>
+                        <div className={styles.cardIcon}>⚙️</div>
                         <h3>How It Works</h3>
-                        <p>Our PSA Oxygen Gas Generators separate oxygen from compressed air using strict Pressure Swing Adsorption technology. This provides a continuous supply of high-purity oxygen at a fraction of the cost of liquid oxygen.</p>
+                        <p>Our PSA Oxygen Gas Generators separate oxygen from compressed air using Pressure Swing Adsorption technology. This provides a continuous supply of high-purity oxygen at a fraction of the cost of liquid oxygen.</p>
                     </div>
                     <div className={styles.card}>
+                        <div className={styles.cardIcon}>✨</div>
                         <h3>Key Benefits</h3>
                         <ul>
                             <li>Fully Automated Operation</li>
@@ -44,13 +49,27 @@ export default function OxygenPlantsPage() {
                         </ul>
                     </div>
                     <div className={styles.card}>
+                        <div className={styles.cardIcon}>🏭</div>
                         <h3>Applications</h3>
                         <ul>
                             <li>Medical Hospitals</li>
-                            <li>Metal Cutting & fabrication</li>
+                            <li>Metal Cutting & Fabrication</li>
                             <li>Fish Farming</li>
                             <li>Glass Industry</li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className={styles.ctaSection}>
+                <div className="container">
+                    <div className={styles.ctaContent}>
+                        <h2>Need an Oxygen Generation Solution?</h2>
+                        <p>Contact our experts for customized oxygen plant solutions tailored to your requirements.</p>
+                        <Link href="/contact" className="btn btn-dark">
+                            Speak to an Expert
+                        </Link>
                     </div>
                 </div>
             </section>

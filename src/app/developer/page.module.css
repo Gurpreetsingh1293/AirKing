@@ -1,0 +1,120 @@
+.container {
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    color: #4af626;
+    /* Terminal green */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 2px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #4af626;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(74, 246, 38, 0.2);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(74, 246, 38, 0.4);
+}
+
+.profileImageContainer {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    border: 3px solid #4af626;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(120%);
+}
+
+.name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #4af626;
+}
+
+.role {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.bio {
+    color: #aaaaaa;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.socialbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: #4af626;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 1px solid #4af626;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.socialbtn:hover {
+    background: #4af626;
+    color: #000;
+    box-shadow: 0 0 20px rgba(74, 246, 38, 0.5);
+}
+
+.glitch {
+    position: relative;
+}
+
+/* Simple typewriter or blink cursor effect if desired, skipping for now to keep it clean */

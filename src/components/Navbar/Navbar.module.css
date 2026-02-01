@@ -1,10 +1,18 @@
 .navbar {
-    background-color: var(--bg-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--pure-white);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
+    transition: all var(--transition-base);
+    border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navContainer {
@@ -18,19 +26,29 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    transition: transform var(--transition-fast);
+}
+
+.logoLink:hover {
+    transform: scale(1.02);
 }
 
 .logoImage {
     object-fit: contain;
     mix-blend-mode: multiply;
-    /* Helps if the logo has a white background on a white navbar */
+    border-radius: var(--radius-sm);
 }
 
 .brandName {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    color: var(--primary-blue);
+    color: var(--primary-navy);
     letter-spacing: -0.5px;
+    transition: color var(--transition-fast);
+}
+
+.logoLink:hover .brandName {
+    color: var(--electric-blue);
 }
 
 .navLinks {
@@ -42,23 +60,164 @@
 
 .navLinks a {
     font-weight: 500;
-    color: var(--text-dark);
-    transition: color 0.2s;
+    color: var(--dark-charcoal);
+    transition: color var(--transition-fast);
     font-size: 0.95rem;
+    position: relative;
+    padding: 8px 0;
+}
+
+.navLinks a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--electric-blue);
+    transition: width var(--transition-base);
+}
+
+.navLinks a:hover::after {
+    width: 100%;
 }
 
 .navLinks a:hover {
-    color: var(--industrial-red);
+    color: var(--electric-blue);
 }
 
 .contactBtn {
-    background-color: var(--primary-blue);
+    background-color: var(--electric-blue);
     color: white !important;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease !important;
+    padding: 12px 24px !important;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base) !important;
+    box-shadow: 0 4px 14px rgba(0, 102, 255, 0.25);
+}
+
+.contactBtn::after {
+    display: none !important;
 }
 
 .contactBtn:hover {
-    background-color: var(--secondary-blue) !important;
+    background-color: #0052CC !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.35);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    gap: 5px;
+}
+
+.hamburgerLine {
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary-navy);
+    transition: all var(--transition-base);
+    border-radius: 2px;
+}
+
+.hamburger.active .hamburgerLine:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburgerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--pure-white);
+    z-index: 999;
+    padding-top: 80px;
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+}
+
+.mobileMenu.open {
+    transform: translateX(0);
+}
+
+.mobileNavLinks {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobileNavLinks li {
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.mobileNavLinks a {
+    display: block;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-charcoal);
+    transition: all var(--transition-fast);
+}
+
+.mobileNavLinks a:hover {
+    color: var(--electric-blue);
+    padding-left: 10px;
+}
+
+.mobileContactBtn {
+    display: inline-block !important;
+    background-color: var(--electric-blue);
+    color: white !important;
+    padding: 14px 28px !important;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .brandName {
+        font-size: 1.2rem;
+    }
+
+    .logoImage {
+        width: 40px !important;
+        height: 40px !important;
+    }
 }

@@ -35,7 +35,7 @@ const productsData = [
         name: 'Vertical Air Compressor',
         category: 'compressor',
         description: 'Space-saving vertical design air compressor, ideal for workshops with limited floor space.',
-        image: '/images/compressor.png', // Reusing existing generic image
+        image: '/images/compressor.png',
         specs: {
             'Orientation': 'Vertical',
             'Power': '25-250 HP',
@@ -49,7 +49,7 @@ const productsData = [
         name: 'Expansion Engine',
         category: 'oxygen',
         description: 'High-precision stainless steel expansion engine for oxygen plants. Critical for cryogenic cooling.',
-        image: '/images/expansion-engine.png',
+        image: '/images/Expansion-Engine.jpg',
         specs: {
             'Material': 'Stainless Steel',
             'Application': 'Oxygen Plant',
@@ -99,7 +99,7 @@ const productsData = [
         name: 'Cylinder Valve',
         category: 'valves',
         description: 'High pressure cylinder valves for oxygen and medical gas cylinders.',
-        image: '/images/safety-valve.png', // Reusing safety valve image for generic valve look
+        image: '/images/safety-valve.png',
         specs: {
             'Gas': 'Oxygen/Medical',
             'Standard': 'Industrial',
@@ -111,13 +111,157 @@ const productsData = [
         name: 'Air Oil Separator',
         category: 'spares',
         description: 'Premium quality separator element to ensure oil-free air delivery.',
-        image: '/images/spares.png', // Reusing generic spares image
+        image: '/images/spares.png',
         specs: {
             'Efficiency': '99.9%',
             'Life': 'Long Service',
             'Type': 'Spin-on/Element'
         }
-    }
+    },
+    {
+        id: 10,
+        name: 'Ball Valve',
+        category: 'oxygen',
+        description: 'High-quality ball valve for oxygen plant applications.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Stainless Steel',
+            'Type': 'Two Piece',
+            'Application': 'Oxygen Line'
+        }
+    },
+    {
+        id: 11,
+        name: 'Piston Rings',
+        category: 'oxygen',
+        description: 'Precision-engineered piston rings for oxygen compressors.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Special Alloy',
+            'Type': 'Compression',
+            'Application': 'Compressor'
+        }
+    },
+    {
+        id: 12,
+        name: 'Push Rod',
+        category: 'oxygen',
+        description: 'Heavy-duty push rod for oxygen plant machinery.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Hardened Steel',
+            'Type': 'Solid',
+            'Application': 'Engine Parts'
+        }
+    },
+    {
+        id: 13,
+        name: 'Gasket',
+        category: 'oxygen',
+        description: 'Industrial grade gaskets for leak-proof sealing.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'PTFE/Graphite',
+            'Type': 'Ring',
+            'Application': 'Sealing'
+        }
+    },
+    {
+        id: 14,
+        name: 'Liner',
+        category: 'oxygen',
+        description: 'Precision liner for compressor cylinders.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Cast Iron',
+            'Type': 'Cylinder',
+            'Finish': 'Honed'
+        }
+    },
+    {
+        id: 15,
+        name: 'Double Head Key',
+        category: 'oxygen',
+        description: 'Specialized double head key for maintenance operations.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Chrome Vanadium',
+            'Type': 'Double End',
+            'Application': 'Maintenance'
+        }
+    },
+    {
+        id: 16,
+        name: 'Hex Nut Filling',
+        category: 'oxygen',
+        description: 'Industrial hex nuts for high-pressure applications.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Stainless Steel',
+            'Grade': 'A2-70',
+            'Standard': 'ISO 4032'
+        }
+    },
+    {
+        id: 17,
+        name: 'NRV',
+        category: 'oxygen',
+        description: 'Non-return valve for preventing backflow in pipelines.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Stainless Steel',
+            'Type': 'Spring Loaded',
+            'Application': 'Pipeline'
+        }
+    },
+    {
+        id: 18,
+        name: 'Perlite Powder',
+        category: 'oxygen',
+        description: 'Insulation material for cryogenic vessels.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Material': 'Expanded Perlite',
+            'Application': 'Insulation',
+            'Temperature': 'Cryogenic'
+        }
+    },
+    {
+        id: 19,
+        name: 'Molecular Sieve',
+        category: 'oxygen',
+        description: 'High-performance molecular sieve for gas separation.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Type': '13X/5A',
+            'Application': 'Gas Separation',
+            'Capacity': 'Industrial'
+        }
+    },
+    {
+        id: 20,
+        name: 'Oxygen Analyzer',
+        category: 'oxygen',
+        description: 'Precision oxygen purity analyzer for monitoring.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Range': '0-100%',
+            'Display': 'Digital',
+            'Accuracy': '±0.1%'
+        }
+    },
+    {
+        id: 21,
+        name: 'Air Filter',
+        category: 'compressor-spares',
+        description: 'High-efficiency air filter for compressor intake.',
+        image: '/images/ball-valve-1.jpg',
+        specs: {
+            'Efficiency': '99.5%',
+            'Type': 'Panel/Cartridge',
+            'Application': 'Compressor'
+        }
+    },
 ];
 
 export default function ProductsPage() {
@@ -130,40 +274,55 @@ export default function ProductsPage() {
     const categories = [
         { id: 'all', label: 'All Products' },
         { id: 'compressor', label: 'Air Compressors' },
+        { id: 'compressor-spares', label: 'Compressor Spares' },
         { id: 'oxygen', label: 'Oxygen Plant Spares' },
         { id: 'valves', label: 'Industrial Valves' },
         { id: 'pumps', label: 'Industrial Pumps' },
-        { id: 'spares', label: 'Spares & Accessories' },
+        { id: 'spares', label: 'Accessories' },
     ];
 
     return (
         <div className={styles.pageContainer}>
-            <div className="container">
-                <header className={styles.header}>
+            {/* Dark Header */}
+            <header className={styles.header}>
+                <div className="container">
                     <h1 className={styles.pageTitle}>Our Products</h1>
                     <p className={styles.pageDesc}>
                         Comprehensive range of Air Compressors, Oxygen Plant Components, and Industrial Spares.
                     </p>
-                </header>
-
-                <div className={styles.filters}>
-                    {categories.map(cat => (
-                        <button
-                            key={cat.id}
-                            className={`${styles.filterBtn} ${filter === cat.id ? styles.active : ''}`}
-                            onClick={() => setFilter(cat.id)}
-                        >
-                            {cat.label}
-                        </button>
-                    ))}
                 </div>
+            </header>
 
-                <div className={styles.grid}>
-                    {filteredProducts.map(product => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
+            {/* Sticky Filters */}
+            <div className={styles.filtersSection}>
+                <div className="container">
+                    <div className={styles.filters}>
+                        {categories.map(cat => (
+                            <button
+                                key={cat.id}
+                                className={`${styles.filterBtn} ${filter === cat.id ? styles.active : ''}`}
+                                onClick={() => setFilter(cat.id)}
+                            >
+                                {cat.label}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
+
+            {/* Products Grid */}
+            <section className={styles.productsSection}>
+                <div className="container">
+                    <p className={styles.resultsCount}>
+                        Showing <strong>{filteredProducts.length}</strong> products
+                    </p>
+                    <div className={styles.grid}>
+                        {filteredProducts.map(product => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
