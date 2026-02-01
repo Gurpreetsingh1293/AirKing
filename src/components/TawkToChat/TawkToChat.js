@@ -4,21 +4,28 @@ import { useEffect } from 'react';
 
 export default function TawkToChat() {
     useEffect(() => {
-        // Tawk.to Live Chat Script
-        var Tawk_API = window.Tawk_API || {};
-        var Tawk_LoadStart = new Date();
+        // Only run in browser
+        if (typeof window === 'undefined') return;
 
-        (function () {
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            // Replace with your Tawk.to property ID
-            s1.src = 'https://embed.tawk.to/697f8dc4fd3ee61c36a86f1c/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
+        // Tawk.to Live Chat Script
+        window.Tawk_API = window.Tawk_API || {};
+        window.Tawk_LoadStart = new Date();
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://embed.tawk.to/697f8dc4fd3ee61c36a86f1c/1jgd43j6k';
+        script.charset = 'UTF-8';
+        script.setAttribute('crossorigin', '*');
+
+        document.head.appendChild(script);
+
+        return () => {
+            // Cleanup on unmount
+            if (script.parentNode) {
+                script.parentNode.removeChild(script);
+            }
+        };
     }, []);
 
-    return null; // This component doesn't render anything
+    return null;
 }
