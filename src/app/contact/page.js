@@ -1,16 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import styles from './page.module.css';
 
-export default function ContactPage() {
+function ContactFormContent() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         message: ''
     });
+    const searchParams = useSearchParams();
     const [status, setStatus] = useState('');
+
+    useEffect(() => {
+        const product = searchParams.get('product');
+        if (product) {
+            setFormData(prev => ({
+                ...prev,
+                message: `I would like to request a quote for: ${product}`
+            }));
+        }
+    }, [searchParams]);
 
     const handleChange = (e) => {
         setFormData({
@@ -168,5 +180,13 @@ export default function ContactPage() {
                 </div>
             </section>
         </div>
+    );
+}
+
+export default function ContactPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ContactFormContent />
+        </Suspense>
     );
 }

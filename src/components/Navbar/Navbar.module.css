@@ -82,8 +82,13 @@
     width: 100%;
 }
 
-.navLinks a:hover {
+.navLinks a:hover,
+.navLinks a.active {
     color: var(--electric-blue);
+}
+
+.navLinks a.active::after {
+    width: 100%;
 }
 
 .contactBtn {
@@ -181,7 +186,8 @@
     transition: all var(--transition-fast);
 }
 
-.mobileNavLinks a:hover {
+.mobileNavLinks a:hover,
+.mobileNavLinks a.activeMobile {
     color: var(--electric-blue);
     padding-left: 10px;
 }

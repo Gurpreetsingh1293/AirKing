@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,11 +46,11 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className={styles.navLinks}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/products">Products</Link></li>
-          <li><Link href="/services">Services & Spares</Link></li>
-          <li><Link href="/oxygen-plants">Oxygen Plants</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
+          <li><Link href="/" className={pathname === '/' ? styles.active : ''}>Home</Link></li>
+          <li><Link href="/products" className={pathname === '/products' ? styles.active : ''}>Products</Link></li>
+          <li><Link href="/services" className={pathname === '/services' ? styles.active : ''}>Services & Spares</Link></li>
+          <li><Link href="/oxygen-plants" className={pathname === '/oxygen-plants' ? styles.active : ''}>Oxygen Plants</Link></li>
+          <li><Link href="/blog" className={pathname.startsWith('/blog') ? styles.active : ''}>Blog</Link></li>
           <li><Link href="/contact" className={styles.contactBtn}>Contact Us</Link></li>
         </ul>
 
@@ -67,11 +69,11 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
           <ul className={styles.mobileNavLinks}>
-            <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
-            <li><Link href="/products" onClick={closeMobileMenu}>Products</Link></li>
-            <li><Link href="/services" onClick={closeMobileMenu}>Services & Spares</Link></li>
-            <li><Link href="/oxygen-plants" onClick={closeMobileMenu}>Oxygen Plants</Link></li>
-            <li><Link href="/blog" onClick={closeMobileMenu}>Blog</Link></li>
+            <li><Link href="/" onClick={closeMobileMenu} className={pathname === '/' ? styles.activeMobile : ''}>Home</Link></li>
+            <li><Link href="/products" onClick={closeMobileMenu} className={pathname === '/products' ? styles.activeMobile : ''}>Products</Link></li>
+            <li><Link href="/services" onClick={closeMobileMenu} className={pathname === '/services' ? styles.activeMobile : ''}>Services & Spares</Link></li>
+            <li><Link href="/oxygen-plants" onClick={closeMobileMenu} className={pathname === '/oxygen-plants' ? styles.activeMobile : ''}>Oxygen Plants</Link></li>
+            <li><Link href="/blog" onClick={closeMobileMenu} className={pathname.startsWith('/blog') ? styles.activeMobile : ''}>Blog</Link></li>
             <li><Link href="/contact" onClick={closeMobileMenu} className={styles.mobileContactBtn}>Contact Us</Link></li>
           </ul>
         </div>
